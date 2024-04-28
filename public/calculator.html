@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>UpConstruction Bootstrap Template - Service Details</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/app/public/img/favicon.png" rel="icon">
+  <link href="/app/public/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/app/public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/app/public/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/app/public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="/app/public/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/app/public/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/app/public/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/app/public/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction
+  * Updated: Mar 13 2024 with Bootstrap v5.3.3
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="/app/public/img/logo.png" alt=""> -->
+        <h1>UpConstruction<span>.</span></h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('/app/public/img/breadcrumbs-bg.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Service Details</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Service Details</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Service Details Section ======= -->
+    <section id="service-details" class="service-details">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+           <!-- Таблица с комнатами -->
+    <div id="viewport">
+      <table class="table table-striped table-borderless">
+          <thead>
+              <tr>
+                  <th scope="col">Добавить помещение:</th>
+                  <th scope="col" class="rooms_types_menu">
+                      <a class="btn btn-outline-primary" v-on:click="add_room('Кухня')"><strong>Кухня</strong></a>
+                      <a class="btn btn-outline-primary" v-on:click="add_room('Комната')"><strong>Комната</strong></a>
+                      <a class="btn btn-outline-primary" v-on:click="add_room('Гостиная')"><strong>Гостиная</strong></a>
+                      <a class="btn btn-outline-primary" v-on:click="add_room('Санузел')"><strong>Санузел</strong></a>
+                      <a class="btn btn-outline-primary" v-on:click="add_room('Другое')"><strong>Другое</strong></a>
+                  </th>
+              </tr>
+          </thead>
+      </table>
+      <table class="table table-bordered table-striped">
+          <thead>
+              <tr>
+                  <th scope="col">Помещение</th>
+                  <th scope="col">Длина, м</th>
+                  <th scope="col">Ширина, м</th>
+                  <th scope="col">Высота, м</th>
+                  <th scope="col"></th>
+              </tr>
+              <tr v-for="(room, index) in rooms_to_calculate">
+                  <th scope="row" style="vertical-align: middle;">{{ room.room_type }}</th>
+                  <td><input type="text" class="form-control" v-model="rooms_to_calculate[index]['room_lenght']"></td>
+                  <td><input type="text" class="form-control" v-model="rooms_to_calculate[index]['room_width']"></td>
+                  <td><input type="text" class="form-control" v-model="rooms_to_calculate[index]['room_height']"></td>
+                  <td><a class="btn btn-danger" v-on:click="remote_room_from_table(index)">Удалить</a></td>
+              </tr>
+          </thead>
+      </table>
+      <!-- Кнопка посчитать -->
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-primary" type="button" v-on:click="send_calculation_info()">Посчитать</button>
+      </div>
+  </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Service Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>UpConstruction</h3>
+              <p>
+                A108 Adam Street <br>
+                NY 535022, USA<br><br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links d-flex mt-3">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End footer info column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policy</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">Product Management</a></li>
+              <li><a href="#">Marketing</a></li>
+              <li><a href="#">Graphic Design</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Hic solutasetp</h4>
+            <ul>
+              <li><a href="#">Molestiae accusamus iure</a></li>
+              <li><a href="#">Excepturi dignissimos</a></li>
+              <li><a href="#">Suscipit distinctio</a></li>
+              <li><a href="#">Dilecta</a></li>
+              <li><a href="#">Sit quas consectetur</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Nobis illum</h4>
+            <ul>
+              <li><a href="#">Ipsam</a></li>
+              <li><a href="#">Laudantium dolorum</a></li>
+              <li><a href="#">Dinera</a></li>
+              <li><a href="#">Trodelas</a></li>
+              <li><a href="#">Flexo</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>UpConstruction</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/app/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/app/public/vendor/aos/aos.js"></script>
+  <script src="/app/public/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/app/public/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/app/public/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/app/public/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/app/public/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/app/public/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  <script type="text/javascript">
+      var app = new Vue({
+          el: '#viewport',
+          data: {
+              title: "Не выбрано",
+              rooms_to_calculate: [],
+              response: null
+          },
+          methods: {
+              add_room: function (room_type) {
+                  var room = {
+                      room_type: room_type,
+                      room_lenght: 0,
+                      room_width: 0,
+                      room_height: 0
+                  };
+                  this.rooms_to_calculate.push(room)
+              },
+              remote_room_from_table: function (room_index) {
+                  this.rooms_to_calculate.splice(room_index, 1);
+              },
+              send_calculation_info: async function () {
+                let json = JSON.stringify(this.rooms_to_calculate);
+                let options = {
+                    timeout: 0,
+                    baseURL: 'http://localhost:80',
+                    method: "POST",
+                    url: '/send_calculation_info',
+                    crossDomain: true,
+                    headers: {
+                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+                        'Content-Type': 'application/json'
+                    },
+                    params: {
+                      'rooms': json
+                    }
+                };
+
+                this.response = await axios
+                    .request(options)
+                    .then(function (response) {
+                        console.log(response.data)
+                        alert(response.data['result'])
+                    })
+                    .catch(function (error) {
+                        console.log(error)
+                    });
+            
+              },
+          }
+      })
+  </script>
+
+</body>
+
+</html>

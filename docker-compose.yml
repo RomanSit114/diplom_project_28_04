@@ -1,0 +1,33 @@
+version: "3"
+services:
+  fastapi_education:
+    build: .
+    container_name: fastapi_education_2
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - 80:8000
+    volumes:
+      - .:/app
+    environment:
+      - TZ=Europe/Moscow
+    networks:
+      - backend_network
+  mysql:
+    build: 
+      context: .
+      dockerfile: Dockerfile_mysql
+    env_file:
+      - .env
+    container_name: mysql
+    restart: always
+    ports:
+      - 3306:3306
+    networks:
+      - backend_network
+
+networks:
+  backend_network:
+    name: backend_network
+    driver: "bridge"
